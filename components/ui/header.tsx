@@ -15,18 +15,10 @@ export default function Header() {
           <ul className="flex flex-1 items-center justify-end gap-3">
             <li>
               <Link
-                href="/signin"
-                className="btn-sm bg-white text-gray-900 shadow-sm hover:bg-gray-50 border border-gray-200 transition-all duration-300 hover:scale-105"
-              >
-                Login
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/signup"
+                href="/contact"
                 className="btn-sm bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg shadow-blue-500/50 hover:shadow-xl hover:scale-105 font-semibold transition-all duration-300"
               >
-                Get Started
+                Build with Cordoba AI
               </Link>
             </li>
           </ul>
