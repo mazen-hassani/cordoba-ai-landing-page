@@ -98,93 +98,89 @@ export default function FeaturesPlanet() {
                 Built with the latest technologies. React, TypeScript, Node.js, Python, and AI frameworks that deliver exceptional performance.
               </p>
             </article>
-            <article>
-              <h3 className="mb-2 flex items-center space-x-2 font-medium text-[#E9DCC9]">
-                <svg
-                  className="fill-[#34D1BF]"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width={16}
-                  height={16}
-                >
-                  <path d="M14.29 2.614a1 1 0 0 0-1.58-1.228L6.407 9.492l-3.199-3.2a1 1 0 1 0-1.414 1.415l4 4a1 1 0 0 0 1.496-.093l7-9ZM1 14a1 1 0 1 0 0 2h14a1 1 0 1 0 0-2H1Z" />
+            <article className="group bg-white p-8 hover:bg-gradient-to-br hover:from-purple-50 hover:to-pink-50 transition-all duration-300">
+              <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-purple-500 to-purple-600 text-white shadow-lg shadow-purple-500/50 group-hover:scale-110 transition-transform duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" width={20} height={20} fill="currentColor">
+                  <path d="M10 2 L18 6 L18 14 L10 18 L2 14 L2 6 Z M10 4 L4 7 L4 13 L10 16 L16 13 L16 7 Z M10 8 L7 10 L7 12 L10 14 L13 12 L13 10 Z" />
                 </svg>
-                <span>Strategic IT Consulting</span>
+              </div>
+              <h3 className="mb-2 text-xl font-bold text-gray-900">
+                99.9% Uptime
               </h3>
-              <p className="text-[15px] text-[#C6A770]">
-                Navigate complex technology landscapes with expert guidance that
-                transforms challenges into opportunities for growth.
+              <p className="text-gray-600 leading-relaxed">
+                Enterprise-grade infrastructure with monitoring, automatic failover, and guaranteed SLAs. Your apps stay online.
               </p>
             </article>
-            <article>
-              <h3 className="mb-2 flex items-center space-x-2 font-medium text-[#E9DCC9]">
-                <svg
-                  className="fill-[#34D1BF]"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width={16}
-                  height={16}
-                >
-                  <path
-                    d="M2.248 6.285a1 1 0 0 1-1.916-.57A8.014 8.014 0 0 1 5.715.332a1 1 0 0 1 .57 1.916 6.014 6.014 0 0 0-4.037 4.037Z"
-                    opacity=".3"
-                  />
-                  <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6Zm0-2a1 1 0 1 0 0-2 1 1 0 0 0 0 2Zm1.715-6.752a1 1 0 0 1 .57-1.916 8.014 8.014 0 0 1 5.383 5.383 1 1 0 1 1-1.916.57 6.014 6.014 0 0 0-4.037-4.037Zm4.037 7.467a1 1 0 1 1 1.916.57 8.014 8.014 0 0 1-5.383 5.383 1 1 0 1 1-.57-1.916 6.014 6.014 0 0 0 4.037-4.037Zm-7.467 4.037a1 1 0 1 1-.57 1.916 8.014 8.014 0 0 1-5.383-5.383 1 1 0 1 1 1.916-.57 6.014 6.014 0 0 0 4.037 4.037Z" />
+
+            <article className="group bg-white p-8 hover:bg-gradient-to-br hover:from-green-50 hover:to-emerald-50 transition-all duration-300 rounded-tr-2xl">
+              <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-green-500 to-emerald-600 text-white shadow-lg shadow-green-500/50 group-hover:scale-110 transition-transform duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" width={20} height={20} fill="currentColor">
+                  <path d="M17 2.5 L7 12.5 L3 8.5 L4.5 7 L7 9.5 L15.5 1 Z" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
-                <span>Digital Transformation</span>
+              </div>
+              <h3 className="mb-2 text-xl font-bold text-gray-900">
+                Tested & Secure
               </h3>
-              <p className="text-[15px] text-[#C6A770]">
-                Modernize your operations with comprehensive digital strategies that
-                drive measurable business outcomes and competitive advantage.
+              <p className="text-gray-600 leading-relaxed">
+                Comprehensive testing suite, security audits, and compliance certifications. Code you can trust in production.
               </p>
             </article>
-            <article>
-              <h3 className="mb-2 flex items-center space-x-2 font-medium text-[#E9DCC9]">
-                <svg
-                  className="fill-[#34D1BF]"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width={16}
-                  height={16}
-                >
-                  <path d="M9 1a1 1 0 1 0-2 0v6a1 1 0 0 0 2 0V1ZM4.572 3.08a1 1 0 0 0-1.144-1.64A7.987 7.987 0 0 0 0 8a8 8 0 0 0 16 0c0-2.72-1.36-5.117-3.428-6.56a1 1 0 1 0-1.144 1.64A5.987 5.987 0 0 1 14 8 6 6 0 1 1 2 8a5.987 5.987 0 0 1 2.572-4.92Z" />
+
+            <article className="group bg-white p-8 hover:bg-gradient-to-br hover:from-orange-50 hover:to-red-50 transition-all duration-300">
+              <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-orange-500 to-red-600 text-white shadow-lg shadow-orange-500/50 group-hover:scale-110 transition-transform duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" width={20} height={20} fill="currentColor">
+                  <circle cx="10" cy="10" r="7" fill="none" stroke="currentColor" strokeWidth="2" />
+                  <path d="M10 6 L10 10 L13 13" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
                 </svg>
-                <span>Rapid Prototyping</span>
+              </div>
+              <h3 className="mb-2 text-xl font-bold text-gray-900">
+                Lightning Fast
               </h3>
-              <p className="text-[15px] text-[#C6A770]">
-                Turn ideas into working prototypes at unprecedented speed, validating
-                concepts and accelerating time-to-market.
+              <p className="text-gray-600 leading-relaxed">
+                Optimized builds, edge deployment, and CDN integration. Sub-100ms response times globally.
               </p>
             </article>
-            <article>
-              <h3 className="mb-2 flex items-center space-x-2 font-medium text-[#E9DCC9]">
-                <svg
-                  className="fill-[#34D1BF]"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width={16}
-                  height={16}
-                >
-                  <path d="M10.284.33a1 1 0 1 0-.574 1.917 6.049 6.049 0 0 1 2.417 1.395A1 1 0 0 0 13.5 2.188 8.034 8.034 0 0 0 10.284.33ZM6.288 2.248A1 1 0 0 0 5.718.33 8.036 8.036 0 0 0 2.5 2.187a1 1 0 0 0 1.372 1.455 6.036 6.036 0 0 1 2.415-1.395ZM1.42 5.401a1 1 0 0 1 .742 1.204 6.025 6.025 0 0 0 0 2.79 1 1 0 0 1-1.946.462 8.026 8.026 0 0 1 0-3.714A1 1 0 0 1 1.421 5.4Zm2.452 6.957A1 1 0 0 0 2.5 13.812a8.036 8.036 0 0 0 3.216 1.857 1 1 0 0 0 .574-1.916 6.044 6.044 0 0 1-2.417-1.395Zm9.668.04a1 1 0 0 1-.041 1.414 8.033 8.033 0 0 1-3.217 1.857 1 1 0 1 1-.571-1.917 6.035 6.035 0 0 0 2.415-1.395 1 1 0 0 1 1.414.042Zm2.242-6.255a1 1 0 1 0-1.946.462 6.03 6.03 0 0 1 0 2.79 1 1 0 1 0 1.946.462 8.022 8.022 0 0 0 0-3.714Z" />
+
+            <article className="group bg-white p-8 hover:bg-gradient-to-br hover:from-cyan-50 hover:to-blue-50 transition-all duration-300">
+              <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-cyan-500 to-blue-600 text-white shadow-lg shadow-cyan-500/50 group-hover:scale-110 transition-transform duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" width={20} height={20} fill="currentColor">
+                  <rect x="3" y="5" width="14" height="10" rx="2" fill="none" stroke="currentColor" strokeWidth="2" />
+                  <path d="M6 9 L11 9 M6 12 L14 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
                 </svg>
-                <span>IT Outsourcing</span>
+              </div>
+              <h3 className="mb-2 text-xl font-bold text-gray-900">
+                AI-Powered
               </h3>
-              <p className="text-[15px] text-[#C6A770]">
-                Scale your team with expert developers and IT professionals who integrate
-                seamlessly with your existing workflows.
+              <p className="text-gray-600 leading-relaxed">
+                Intelligent code generation, automated testing, and smart deployments. Build 10x faster with AI assistance.
               </p>
             </article>
-            <article>
-              <h3 className="mb-2 flex items-center space-x-2 font-medium text-[#E9DCC9]">
-                <svg
-                  className="fill-[#34D1BF]"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width={16}
-                  height={16}
-                >
-                  <path d="M2 4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4Zm2-4a4 4 0 0 0-4 4v8a4 4 0 0 0 4 4h8a4 4 0 0 0 4-4V4a4 4 0 0 0-4-4H4Zm1 10a1 1 0 1 0 0 2h6a1 1 0 1 0 0-2H5Z" />
+
+            <article className="group bg-white p-8 hover:bg-gradient-to-br hover:from-indigo-50 hover:to-purple-50 transition-all duration-300 rounded-bl-2xl">
+              <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 text-white shadow-lg shadow-indigo-500/50 group-hover:scale-110 transition-transform duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" width={20} height={20} fill="currentColor">
+                  <path d="M4 10 L8 6 L8 14 Z M12 10 L16 6 L16 14 Z" />
                 </svg>
-                <span>Custom Solutions</span>
+              </div>
+              <h3 className="mb-2 text-xl font-bold text-gray-900">
+                Auto Scaling
               </h3>
-              <p className="text-[15px] text-[#C6A770]">
-                Tailored technology solutions designed specifically for your unique business
-                needs and industry requirements.
+              <p className="text-gray-600 leading-relaxed">
+                Handle traffic spikes effortlessly. From zero to millions of requests with automatic resource management.
+              </p>
+            </article>
+
+            <article className="group bg-white p-8 hover:bg-gradient-to-br hover:from-pink-50 hover:to-rose-50 transition-all duration-300 rounded-br-2xl">
+              <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-pink-500 to-rose-600 text-white shadow-lg shadow-pink-500/50 group-hover:scale-110 transition-transform duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" width={20} height={20} fill="currentColor">
+                  <path d="M10 3 L13 9 L19 10 L14.5 14.5 L15.5 20 L10 17 L4.5 20 L5.5 14.5 L1 10 L7 9 Z" />
+                </svg>
+              </div>
+              <h3 className="mb-2 text-xl font-bold text-gray-900">
+                24/7 Support
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Expert engineering team available around the clock. Real humans, real solutions, real fast.
               </p>
             </article>
           </div>

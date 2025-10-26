@@ -16,7 +16,7 @@ export default function Header() {
             <li>
               <Link
                 href="/signin"
-                className="btn-sm bg-white text-[#0A0F1F] shadow-sm hover:bg-gray-50 border border-[#C6A770]"
+                className="btn-sm bg-white text-gray-900 shadow-sm hover:bg-gray-50 border border-gray-200 transition-all duration-300 hover:scale-105"
               >
                 Login
               </Link>
@@ -24,7 +24,7 @@ export default function Header() {
             <li>
               <Link
                 href="/signup"
-                className="btn-sm bg-[#34D1BF] text-[#0A0F1F] shadow-sm hover:bg-[#2dbaa8] font-semibold"
+                className="btn-sm bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg shadow-blue-500/50 hover:shadow-xl hover:scale-105 font-semibold transition-all duration-300"
               >
                 Get Started
               </Link>
