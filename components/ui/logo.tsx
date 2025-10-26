@@ -2,27 +2,29 @@ import Link from "next/link";
 
 export default function Logo() {
   return (
-    <Link href="/" className="inline-flex items-center gap-2" aria-label="Cordoba AI">
-      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
-        {/* Inspired by Al-Andalus geometric patterns */}
+    <Link href="/" className="inline-flex items-center gap-2 group" aria-label="Cordoba AI">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" className="transition-transform duration-300 group-hover:scale-110">
+        <defs>
+          <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#3B82F6" />
+            <stop offset="100%" stopColor="#8B5CF6" />
+          </linearGradient>
+        </defs>
+        {/* Modern, minimal geometric logo */}
         <g>
-          {/* Outer octagon - representing the bridge between past and future */}
+          {/* Main shape - abstract C */}
           <path
-            d="M16 2 L22 5 L27 10 L30 16 L27 22 L22 27 L16 30 L10 27 L5 22 L2 16 L5 10 L10 5 Z"
-            fill="#34D1BF"
-            opacity="0.2"
+            d="M16 4 C9.373 4 4 9.373 4 16 C4 22.627 9.373 28 16 28 C18.5 28 20.8 27.2 22.7 25.8 L20.5 22.8 C19.2 23.6 17.6 24 16 24 C11.582 24 8 20.418 8 16 C8 11.582 11.582 8 16 8 C17.6 8 19.2 8.4 20.5 9.2 L22.7 6.2 C20.8 4.8 18.5 4 16 4 Z"
+            fill="url(#logoGradient)"
+            className="transition-all duration-300"
           />
-          {/* Inner geometric star pattern */}
-          <path
-            d="M16 6 L18.5 11 L24 11.5 L19.5 15.5 L21 21 L16 18 L11 21 L12.5 15.5 L8 11.5 L13.5 11 Z"
-            fill="#C6A770"
-          />
-          {/* Center point - AI core */}
-          <circle cx="16" cy="16" r="3" fill="#0A0F1F" />
-          <circle cx="16" cy="16" r="1.5" fill="#34D1BF" />
+          {/* Accent element */}
+          <circle cx="24" cy="16" r="2.5" fill="#8B5CF6" opacity="0.8" className="animate-pulse" />
         </g>
       </svg>
-      <span className="text-lg font-bold text-[#0A0F1F]">Cordoba AI</span>
+      <span className="text-xl font-bold bg-gradient-to-r from-[#3B82F6] to-[#8B5CF6] bg-clip-text text-transparent">
+        Cordoba AI
+      </span>
     </Link>
   );
 }

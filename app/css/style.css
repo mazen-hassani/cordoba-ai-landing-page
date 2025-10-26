@@ -12,11 +12,15 @@
   --font-inter: Inter, sans-serif;
   --font-mono: Roboto Mono, monospace;
 
-  /* Cordoba AI Brand Colors */
-  --color-midnight-blue: #0A0F1F;
-  --color-sand-beige: #E9DCC9;
-  --color-verdigris-mint: #34D1BF;
-  --color-brass-gold: #C6A770;
+  /* Modern Professional Color Palette */
+  --color-primary-dark: #0A0A0A;
+  --color-primary: #3B82F6;
+  --color-accent: #8B5CF6;
+  --color-success: #10B981;
+  --color-background: #FFFFFF;
+  --color-background-alt: #F9FAFB;
+  --color-gradient-start: #3B82F6;
+  --color-gradient-end: #8B5CF6;
 
   --text-xs: 0.75rem;
   --text-xs--line-height: 1.5;

@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "Cordoba AI - From Al-Andalus to AI",
-  description: "Bridging centuries of knowledge with the intelligence of tomorrow. AI-powered development, strategic IT consulting, and digital transformation solutions.",
+  title: "Cordoba AI - Enterprise Software Excellence",
+  description: "Build faster. Scale smarter. Deliver quality software that drives results. Modern AI-powered development and consulting for teams that demand excellence.",
 };
 
 import Hero from "@/components/hero-home";

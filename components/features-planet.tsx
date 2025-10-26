@@ -8,23 +8,26 @@ import PlanetTagImg04 from "@/public/images/planet-tag-04.png";
 
 export default function FeaturesPlanet() {
   return (
-    <section className="relative before:absolute before:inset-0 before:-z-20 before:bg-[#0A0F1F]">
+    <section className="relative before:absolute before:inset-0 before:-z-20 before:bg-gradient-to-b before:from-gray-50 before:to-white">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="py-12 md:py-20">
           {/* Section header */}
           <div className="mx-auto max-w-3xl pb-16 text-center md:pb-20">
-            <h2 className="text-3xl font-bold text-[#E9DCC9] md:text-4xl">
-              Blending Human Creativity with AI Precision
+            <div className="mb-4 inline-flex items-center rounded-full bg-gradient-to-r from-blue-100 to-purple-100 px-4 py-2 text-sm font-semibold text-blue-900">
+              ⚡ Modern Stack
+            </div>
+            <h2 className="text-3xl font-bold text-gray-900 md:text-5xl">
+              Built for Performance
             </h2>
-            <p className="mt-4 text-lg text-[#C6A770]">
-              From rapid AI-powered development to strategic IT consulting and outsourcing,
-              Cordoba AI turns complexity into clarity — and ideas into outcomes.
+            <p className="mt-4 text-lg text-gray-600 leading-relaxed">
+              Enterprise-grade software development with cutting-edge AI technology.
+              Fast, reliable, and scalable solutions that grow with your business.
             </p>
           </div>
           {/* Planet */}
           <div className="pb-16 md:pb-20" data-aos="zoom-y-out">
             <div className="text-center">
-              <div className="relative inline-flex rounded-full before:absolute before:inset-0 before:-z-10 before:scale-[.85] before:animate-[pulse_4s_cubic-bezier(.4,0,.6,1)_infinite] before:bg-linear-to-b before:from-[#34D1BF] before:to-[#C6A770]/50 before:blur-3xl after:absolute after:inset-0 after:rounded-[inherit] after:[background:radial-gradient(closest-side,var(--color-verdigris-mint),transparent)]">
+              <div className="relative inline-flex rounded-full before:absolute before:inset-0 before:-z-10 before:scale-[.85] before:animate-[pulse_4s_cubic-bezier(.4,0,.6,1)_infinite] before:bg-linear-to-b before:from-blue-500 before:to-purple-500/50 before:blur-3xl after:absolute after:inset-0 after:rounded-[inherit] after:[background:radial-gradient(closest-side,var(--color-primary),transparent)]">
                 <Image
                   className="rounded-full bg-gray-900"
                   src={PlanetImg}
@@ -75,22 +78,24 @@ export default function FeaturesPlanet() {
             </div>
           </div>
           {/* Grid */}
-          <div className="grid overflow-hidden sm:grid-cols-2 lg:grid-cols-3 *:relative *:p-6 *:before:absolute *:before:bg-[#1a1f2e] *:before:[block-size:100vh] *:before:[inline-size:1px] *:before:[inset-block-start:0] *:before:[inset-inline-start:-1px] *:after:absolute *:after:bg-[#1a1f2e] *:after:[block-size:1px] *:after:[inline-size:100vw] *:after:[inset-block-start:-1px] *:after:[inset-inline-start:0] md:*:p-10">
-            <article>
-              <h3 className="mb-2 flex items-center space-x-2 font-medium text-[#E9DCC9]">
+          <div className="grid overflow-hidden sm:grid-cols-2 lg:grid-cols-3 gap-px bg-gray-200 rounded-2xl">
+            <article className="group bg-white p-8 hover:bg-gradient-to-br hover:from-blue-50 hover:to-purple-50 transition-all duration-300 rounded-tl-2xl">
+              <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-blue-500 to-blue-600 text-white shadow-lg shadow-blue-500/50 group-hover:scale-110 transition-transform duration-300">
                 <svg
-                  className="fill-[#34D1BF]"
                   xmlns="http://www.w3.org/2000/svg"
-                  width={16}
-                  height={16}
+                  width={20}
+                  height={20}
+                  fill="currentColor"
+                  viewBox="0 0 16 16"
                 >
-                  <path d="M8 0a1 1 0 0 1 1 1v14a1 1 0 1 1-2 0V1a1 1 0 0 1 1-1Zm6 3a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h1a1 1 0 1 1 0 2h-1a3 3 0 0 1-3-3V4a3 3 0 0 1 3-3h1a1 1 0 1 1 0 2h-1ZM1 1a1 1 0 0 0 0 2h1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H1a1 1 0 1 0 0 2h1a3 3 0 0 0 3-3V4a3 3 0 0 0-3-3H1Z" />
+                  <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
                 </svg>
-                <span>AI-Powered Development</span>
+              </div>
+              <h3 className="mb-2 text-xl font-bold text-gray-900">
+                Modern Stack
               </h3>
-              <p className="text-[15px] text-[#C6A770]">
-                Accelerate your development cycle with intelligent solutions that combine
-                cutting-edge AI technology with proven engineering practices.
+              <p className="text-gray-600 leading-relaxed">
+                Built with the latest technologies. React, TypeScript, Node.js, Python, and AI frameworks that deliver exceptional performance.
               </p>
             </article>
             <article>
