@@ -12,6 +12,12 @@
   --font-inter: Inter, sans-serif;
   --font-mono: Roboto Mono, monospace;
 
+  /* Cordoba AI Brand Colors */
+  --color-midnight-blue: #0A0F1F;
+  --color-sand-beige: #E9DCC9;
+  --color-verdigris-mint: #34D1BF;
+  --color-brass-gold: #C6A770;
+
   --text-xs: 0.75rem;
   --text-xs--line-height: 1.5;
   --text-sm: 0.875rem;

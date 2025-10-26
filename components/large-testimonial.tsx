@@ -18,7 +18,7 @@ export default function LargeTestimonial() {
               >
                 <path
                   d="M22.7976 -0.000136375L39.9352 23.4746L33.4178 31.7234L13.7686 11.4275L22.7976 -0.000136375ZM9.34947 17.0206L26.4871 40.4953L19.9697 48.7441L0.320491 28.4482L9.34947 17.0206Z"
-                  fill="#D1D5DB"
+                  fill="#C6A770"
                 />
               </svg>
               <Image
@@ -30,16 +30,15 @@ export default function LargeTestimonial() {
               />
             </div>
             <p className="text-2xl font-bold text-gray-900">
-              “Simple has simplified my life in more ways than one. From
-              managing my sites to{" "}
-              <em className="italic text-gray-500">keeping track of tasks</em>,
-              it's become my go-to tool for everything.”
+              "Cordoba AI transformed our digital infrastructure in record time. Their blend of{" "}
+              <em className="italic text-gray-500">historical wisdom and cutting-edge AI</em>{" "}
+              delivered solutions that truly understand our business needs."
             </p>
             <div className="text-sm font-medium text-gray-500">
-              <span className="text-gray-700">Mary Sullivan</span>{" "}
+              <span className="text-gray-700">Sarah Martinez</span>{" "}
               <span className="text-gray-400">/</span>{" "}
-              <a className="text-blue-500" href="#0">
-                CTO at Microsoft
+              <a className="text-[#34D1BF] hover:text-[#C6A770] transition" href="#0">
+                VP of Technology
               </a>
             </div>
           </div>

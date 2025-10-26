@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "Home - Simple",
-  description: "Page description",
+  title: "Cordoba AI - From Al-Andalus to AI",
+  description: "Bridging centuries of knowledge with the intelligence of tomorrow. AI-powered development, strategic IT consulting, and digital transformation solutions.",
 };
 
 import Hero from "@/components/hero-home";
