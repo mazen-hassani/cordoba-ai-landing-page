@@ -98,19 +98,6 @@ export default function FeaturesPlanet() {
                 Built with the latest technologies. React, TypeScript, Node.js, Python, and AI frameworks that deliver exceptional performance.
               </p>
             </article>
-            <article className="group bg-white p-8 hover:bg-gradient-to-br hover:from-purple-50 hover:to-pink-50 transition-all duration-300">
-              <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-purple-500 to-purple-600 text-white shadow-lg shadow-purple-500/50 group-hover:scale-110 transition-transform duration-300">
-                <svg xmlns="http://www.w3.org/2000/svg" width={20} height={20} fill="currentColor">
-                  <path d="M10 2 L18 6 L18 14 L10 18 L2 14 L2 6 Z M10 4 L4 7 L4 13 L10 16 L16 13 L16 7 Z M10 8 L7 10 L7 12 L10 14 L13 12 L13 10 Z" />
-                </svg>
-              </div>
-              <h3 className="mb-2 text-xl font-bold text-gray-900">
-                99.9% Uptime
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Enterprise-grade infrastructure with monitoring, automatic failover, and guaranteed SLAs. Your apps stay online.
-              </p>
-            </article>
 
             <article className="group bg-white p-8 hover:bg-gradient-to-br hover:from-green-50 hover:to-emerald-50 transition-all duration-300 rounded-tr-2xl">
               <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-green-500 to-emerald-600 text-white shadow-lg shadow-green-500/50 group-hover:scale-110 transition-transform duration-300">
