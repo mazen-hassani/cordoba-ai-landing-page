@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Cordoba AI - From Al-Andalus to AI",
+  title: "Cordoba AI - Welcome to Next Gen of Software",
   description: "Bridging centuries of knowledge with the intelligence of tomorrow. AI-powered development, strategic IT consulting, and digital transformation solutions.",
 };
 
