@@ -1,7 +1,11 @@
+"use client";
+
 import Link from "next/link";
 import Logo from "./logo";
+import { useLanguage } from "@/lib/LanguageContext";
 
 export default function Footer({ border = false }: { border?: boolean }) {
+  const { language, setLanguage, t } = useLanguage();
   return (
     <footer>
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
@@ -15,20 +19,44 @@ export default function Footer({ border = false }: { border?: boolean }) {
               <Logo />
             </div>
             <div className="text-sm text-gray-600">
-              &copy; Cordoba AI - All rights reserved.
+              &copy; {t("footer.rights")}
+            </div>
+            {/* Language Switcher */}
+            <div className="flex items-center gap-2 pt-4">
+              <span className="text-sm font-semibold text-gray-900">{t("footer.language")}:</span>
+              <button
+                onClick={() => setLanguage("en")}
+                className={`px-3 py-1 text-sm rounded-lg transition-all duration-300 ${
+                  language === "en"
+                    ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-md"
+                    : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+                }`}
+              >
+                English
+              </button>
+              <button
+                onClick={() => setLanguage("ar")}
+                className={`px-3 py-1 text-sm rounded-lg transition-all duration-300 ${
+                  language === "ar"
+                    ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-md"
+                    : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+                }`}
+              >
+                العربية
+              </button>
             </div>
           </div>
 
           {/* 2nd block */}
           <div className="space-y-2 sm:col-span-6 md:col-span-3 lg:col-span-2">
-            <h3 className="text-sm font-semibold text-gray-900">Platform</h3>
+            <h3 className="text-sm font-semibold text-gray-900">{t("footer.platform")}</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
                   className="text-gray-600 transition hover:text-blue-600"
                   href="#0"
                 >
-                  Features
+                  {t("footer.features")}
                 </Link>
               </li>
               <li>
@@ -36,7 +64,7 @@ export default function Footer({ border = false }: { border?: boolean }) {
                   className="text-gray-600 transition hover:text-blue-600"
                   href="#0"
                 >
-                  Integrations
+                  {t("footer.integrations")}
                 </Link>
               </li>
               <li>
@@ -44,7 +72,7 @@ export default function Footer({ border = false }: { border?: boolean }) {
                   className="text-gray-600 transition hover:text-blue-600"
                   href="#0"
                 >
-                  Security
+                  {t("footer.security")}
                 </Link>
               </li>
             </ul>
@@ -52,14 +80,14 @@ export default function Footer({ border = false }: { border?: boolean }) {
 
           {/* 3rd block */}
           <div className="space-y-2 sm:col-span-6 md:col-span-3 lg:col-span-2">
-            <h3 className="text-sm font-semibold text-gray-900">Company</h3>
+            <h3 className="text-sm font-semibold text-gray-900">{t("footer.company")}</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
                   className="text-gray-600 transition hover:text-blue-600"
                   href="#0"
                 >
-                  About
+                  {t("footer.about")}
                 </Link>
               </li>
               <li>
@@ -67,7 +95,7 @@ export default function Footer({ border = false }: { border?: boolean }) {
                   className="text-gray-600 transition hover:text-blue-600"
                   href="/contact"
                 >
-                  Contact
+                  {t("footer.contact")}
                 </Link>
               </li>
             </ul>
@@ -75,14 +103,14 @@ export default function Footer({ border = false }: { border?: boolean }) {
 
           {/* 4th block */}
           <div className="space-y-2 sm:col-span-6 md:col-span-3 lg:col-span-2">
-            <h3 className="text-sm font-medium">Resources</h3>
+            <h3 className="text-sm font-medium">{t("footer.resources")}</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
                   className="text-gray-600 transition hover:text-gray-900"
                   href="#0"
                 >
-                  Community
+                  {t("footer.community")}
                 </Link>
               </li>
               <li>
@@ -90,7 +118,7 @@ export default function Footer({ border = false }: { border?: boolean }) {
                   className="text-gray-600 transition hover:text-gray-900"
                   href="#0"
                 >
-                  Terms of service
+                  {t("footer.terms")}
                 </Link>
               </li>
               <li>
@@ -98,7 +126,7 @@ export default function Footer({ border = false }: { border?: boolean }) {
                   className="text-gray-600 transition hover:text-gray-900"
                   href="#0"
                 >
-                  Report a vulnerability
+                  {t("footer.vulnerability")}
                 </Link>
               </li>
             </ul>
@@ -106,7 +134,7 @@ export default function Footer({ border = false }: { border?: boolean }) {
 
           {/* 5th block */}
           <div className="space-y-2 sm:col-span-6 md:col-span-3 lg:col-span-2">
-            <h3 className="text-sm font-medium">Social</h3>
+            <h3 className="text-sm font-medium">{t("footer.social")}</h3>
             <ul className="flex gap-1">
               <li>
                 <Link

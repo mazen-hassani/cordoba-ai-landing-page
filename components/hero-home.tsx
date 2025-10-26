@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import PageIllustration from "@/components/page-illustration";
 import Avatar01 from "@/public/images/avatar-01.jpg";
@@ -6,8 +8,10 @@ import Avatar03 from "@/public/images/avatar-03.jpg";
 import Avatar04 from "@/public/images/avatar-04.jpg";
 import Avatar05 from "@/public/images/avatar-05.jpg";
 import Avatar06 from "@/public/images/avatar-06.jpg";
+import { useLanguage } from "@/lib/LanguageContext";
 
 export default function HeroHome() {
+  const { t } = useLanguage();
   return (
     <section className="relative">
       <PageIllustration />
@@ -70,8 +74,8 @@ export default function HeroHome() {
               data-aos="zoom-y-out"
               data-aos-delay={150}
             >
-              From idea to release—<br className="max-lg:hidden" />
-              powered by AI Agents.
+              {t("hero.title")} <br className="max-lg:hidden" />
+              {t("hero.titleSub")}
             </h1>
             <div className="mx-auto max-w-3xl">
               <p
@@ -79,7 +83,7 @@ export default function HeroHome() {
                 data-aos="zoom-y-out"
                 data-aos-delay={300}
               >
-                Work with our team to deliver your first production-ready build.
+                {t("hero.description")}
               </p>
               <div className="relative before:absolute before:inset-0 before:border-y before:[border-image:linear-gradient(to_right,transparent,--theme(--color-slate-300/.8),transparent)1]">
                 <div
@@ -92,11 +96,17 @@ export default function HeroHome() {
                     href="/contact"
                   >
                     <span className="relative inline-flex items-center">
-                      Talk to an expert{" "}
+                      {t("hero.cta1")}{" "}
                       <span className="ml-1 tracking-normal transition-transform group-hover:translate-x-0.5">
                         →
                       </span>
                     </span>
+                  </a>
+                  <a
+                    className="btn w-full bg-white text-gray-900 shadow-sm hover:bg-gray-50 hover:scale-105 sm:ml-4 sm:w-auto border border-gray-200 transition-all duration-300"
+                    href="#0"
+                  >
+                    {t("hero.cta2")}
                   </a>
                 </div>
               </div>

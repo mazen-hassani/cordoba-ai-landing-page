@@ -1,7 +1,11 @@
+"use client";
+
 import Image from "next/image";
 import Stripes from "@/public/images/stripes-dark.svg";
+import { useLanguage } from "@/lib/LanguageContext";
 
 export default function Cta() {
+  const { t } = useLanguage();
   return (
     <section>
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
@@ -24,14 +28,14 @@ export default function Cta() {
 
           <div className="px-4 py-16 md:px-12 md:py-24">
             <h2 className="mb-6 text-4xl font-bold text-gray-900 md:text-5xl lg:text-6xl">
-              From idea to release—
+              {t("cta.title")}
               <br />
               <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                powered by AI Agents.
+                {t("cta.titleSub")}
               </span>
             </h2>
             <p className="mx-auto mb-10 max-w-2xl text-lg text-gray-600 leading-relaxed md:text-xl">
-              Work with our team to deliver your first production-ready build.
+              {t("cta.description")}
             </p>
             <div className="mx-auto flex max-w-md flex-col gap-4 sm:flex-row sm:justify-center">
               <a
@@ -39,7 +43,7 @@ export default function Cta() {
                 href="/contact"
               >
                 <span className="relative inline-flex items-center">
-                  Talk to an expert
+                  {t("cta.button")}
                   <span className="ml-2 transition-transform group-hover:translate-x-1">
                     →
                   </span>

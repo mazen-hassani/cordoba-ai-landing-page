@@ -1,7 +1,11 @@
+"use client";
+
 import Link from "next/link";
 import Logo from "./logo";
+import { useLanguage } from "@/lib/LanguageContext";
 
 export default function Header() {
+  const { t } = useLanguage();
   return (
     <header className="fixed top-2 z-30 w-full md:top-6">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
@@ -18,7 +22,7 @@ export default function Header() {
                 href="/contact"
                 className="btn-sm bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg shadow-blue-500/50 hover:shadow-xl hover:scale-105 font-semibold transition-all duration-300"
               >
-                Build with Cordoba AI
+                {t("header.cta")}
               </Link>
             </li>
           </ul>
