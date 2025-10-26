@@ -6,49 +6,59 @@ export default function Cta() {
     <section>
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div
-          className="relative overflow-hidden rounded-2xl text-center shadow-xl before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:rounded-2xl before:bg-gray-900"
+          className="relative overflow-hidden rounded-3xl text-center shadow-2xl border border-gray-200 bg-gradient-to-br from-white via-blue-50/30 to-purple-50/30"
           data-aos="zoom-y-out"
         >
-          {/* Glow */}
+          {/* Animated gradient background */}
+          <div className="absolute inset-0 -z-10 bg-gradient-to-br from-blue-500/5 via-purple-500/5 to-pink-500/5 animate-pulse"></div>
+
+          {/* Glow effects */}
           <div
-            className="absolute bottom-0 left-1/2 -z-10 -translate-x-1/2 translate-y-1/2"
+            className="absolute top-0 left-1/4 -z-10 h-64 w-64 rounded-full bg-blue-500/20 blur-3xl"
             aria-hidden="true"
-          >
-            <div className="h-56 w-[480px] rounded-full border-[20px] border-[#34D1BF] blur-3xl" />
-          </div>
-          {/* Stripes illustration */}
+          />
           <div
-            className="pointer-events-none absolute left-1/2 top-0 -z-10 -translate-x-1/2 transform"
+            className="absolute bottom-0 right-1/4 -z-10 h-64 w-64 rounded-full bg-purple-500/20 blur-3xl"
             aria-hidden="true"
-          >
-            <Image
-              className="max-w-none"
-              src={Stripes}
-              width={768}
-              height={432}
-              alt="Stripes"
-            />
-          </div>
-          <div className="px-4 py-12 md:px-12 md:py-20">
-            <h2 className="mb-6 border-y text-3xl font-bold text-[#E9DCC9] [border-image:linear-gradient(to_right,transparent,--theme(--color-brass-gold/.7),transparent)1] md:mb-12 md:text-4xl">
-              Ready to Transform Your Digital Future?
+          />
+
+          <div className="px-4 py-16 md:px-12 md:py-24">
+            <div className="mb-6 inline-flex items-center rounded-full bg-gradient-to-r from-blue-100 to-purple-100 px-4 py-2 text-sm font-semibold text-blue-900">
+              🚀 Ready to Scale
+            </div>
+            <h2 className="mb-6 text-4xl font-bold text-gray-900 md:text-5xl lg:text-6xl">
+              Ship Production-Grade
+              <br />
+              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                Software Faster
+              </span>
             </h2>
-            <p className="mb-8 text-lg text-[#C6A770]">
-              Join organizations that trust Cordoba AI to turn complexity into clarity and ideas into outcomes.
+            <p className="mx-auto mb-10 max-w-2xl text-lg text-gray-600 leading-relaxed md:text-xl">
+              Join teams building the future with AI-powered development.
+              Start shipping quality software at unprecedented speed.
             </p>
-            <div className="mx-auto max-w-xs sm:flex sm:max-w-none sm:justify-center">
+            <div className="mx-auto flex max-w-md flex-col gap-4 sm:flex-row sm:justify-center">
               <a
-                className="btn group mb-4 w-full bg-linear-to-t from-[#34D1BF] to-[#34D1BF] bg-[length:100%_100%] bg-[bottom] text-[#0A0F1F] shadow-sm hover:bg-[length:100%_150%] sm:mb-0 sm:w-auto font-semibold"
+                className="btn group w-full bg-gradient-to-r from-blue-600 to-purple-600 bg-[length:100%_100%] bg-[bottom] text-white shadow-lg shadow-blue-500/50 hover:shadow-xl hover:scale-105 sm:w-auto font-semibold transition-all duration-300"
                 href="#0"
               >
                 <span className="relative inline-flex items-center">
-                  Start Your Journey{" "}
-                  <span className="ml-1 tracking-normal text-[#0A0F1F] opacity-70 transition-transform group-hover:translate-x-0.5">
-                    -&gt;
+                  Get Started Free
+                  <span className="ml-2 transition-transform group-hover:translate-x-1">
+                    →
                   </span>
                 </span>
               </a>
+              <a
+                className="btn group w-full bg-white text-gray-900 border-2 border-gray-200 hover:border-gray-300 hover:bg-gray-50 hover:scale-105 sm:w-auto transition-all duration-300"
+                href="#0"
+              >
+                Schedule Demo
+              </a>
             </div>
+            <p className="mt-6 text-sm text-gray-500">
+              No credit card required · 14-day free trial · Cancel anytime
+            </p>
           </div>
         </div>
       </div>

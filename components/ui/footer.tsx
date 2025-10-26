@@ -21,46 +21,46 @@ export default function Footer({ border = false }: { border?: boolean }) {
 
           {/* 2nd block */}
           <div className="space-y-2 sm:col-span-6 md:col-span-3 lg:col-span-2">
-            <h3 className="text-sm font-medium">Services</h3>
+            <h3 className="text-sm font-semibold text-gray-900">Platform</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
-                  className="text-gray-600 transition hover:text-gray-900"
+                  className="text-gray-600 transition hover:text-blue-600"
                   href="#0"
                 >
-                  AI Development
+                  Features
                 </Link>
               </li>
               <li>
                 <Link
-                  className="text-gray-600 transition hover:text-gray-900"
+                  className="text-gray-600 transition hover:text-blue-600"
                   href="#0"
                 >
-                  IT Consulting
+                  API Docs
                 </Link>
               </li>
               <li>
                 <Link
-                  className="text-gray-600 transition hover:text-gray-900"
+                  className="text-gray-600 transition hover:text-blue-600"
                   href="#0"
                 >
-                  Digital Transformation
+                  Integrations
                 </Link>
               </li>
               <li>
                 <Link
-                  className="text-gray-600 transition hover:text-gray-900"
+                  className="text-gray-600 transition hover:text-blue-600"
                   href="#0"
                 >
-                  Outsourcing
+                  Security
                 </Link>
               </li>
               <li>
                 <Link
-                  className="text-gray-600 transition hover:text-gray-900"
+                  className="text-gray-600 transition hover:text-blue-600"
                   href="#0"
                 >
-                  Custom Solutions
+                  Pricing
                 </Link>
               </li>
             </ul>
@@ -68,35 +68,35 @@ export default function Footer({ border = false }: { border?: boolean }) {
 
           {/* 3rd block */}
           <div className="space-y-2 sm:col-span-6 md:col-span-3 lg:col-span-2">
-            <h3 className="text-sm font-medium">Company</h3>
+            <h3 className="text-sm font-semibold text-gray-900">Company</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
-                  className="text-gray-600 transition hover:text-gray-900"
+                  className="text-gray-600 transition hover:text-blue-600"
                   href="#0"
                 >
-                  About Us
+                  About
                 </Link>
               </li>
               <li>
                 <Link
-                  className="text-gray-600 transition hover:text-gray-900"
+                  className="text-gray-600 transition hover:text-blue-600"
                   href="#0"
                 >
-                  Our Story
+                  Blog
                 </Link>
               </li>
               <li>
                 <Link
-                  className="text-gray-600 transition hover:text-gray-900"
+                  className="text-gray-600 transition hover:text-blue-600"
                   href="#0"
                 >
-                  Case Studies
+                  Customers
                 </Link>
               </li>
               <li>
                 <Link
-                  className="text-gray-600 transition hover:text-gray-900"
+                  className="text-gray-600 transition hover:text-blue-600"
                   href="#0"
                 >
                   Careers
@@ -104,10 +104,10 @@ export default function Footer({ border = false }: { border?: boolean }) {
               </li>
               <li>
                 <Link
-                  className="text-gray-600 transition hover:text-gray-900"
+                  className="text-gray-600 transition hover:text-blue-600"
                   href="#0"
                 >
-                  Contact Us
+                  Contact
                 </Link>
               </li>
             </ul>
@@ -150,7 +150,7 @@ export default function Footer({ border = false }: { border?: boolean }) {
             <ul className="flex gap-1">
               <li>
                 <Link
-                  className="flex items-center justify-center text-[#34D1BF] transition hover:text-[#C6A770]"
+                  className="flex items-center justify-center text-gray-600 transition hover:text-blue-600"
                   href="#0"
                   aria-label="Twitter"
                 >
@@ -165,7 +165,7 @@ export default function Footer({ border = false }: { border?: boolean }) {
               </li>
               <li>
                 <Link
-                  className="flex items-center justify-center text-[#34D1BF] transition hover:text-[#C6A770]"
+                  className="flex items-center justify-center text-gray-600 transition hover:text-blue-600"
                   href="#0"
                   aria-label="LinkedIn"
                 >
@@ -180,7 +180,7 @@ export default function Footer({ border = false }: { border?: boolean }) {
               </li>
               <li>
                 <Link
-                  className="flex items-center justify-center text-[#34D1BF] transition hover:text-[#C6A770]"
+                  className="flex items-center justify-center text-gray-600 transition hover:text-blue-600"
                   href="#0"
                   aria-label="Github"
                 >
@@ -206,7 +206,7 @@ export default function Footer({ border = false }: { border?: boolean }) {
           className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-2/3"
           aria-hidden="true"
         >
-          <div className="h-56 w-56 rounded-full border-[20px] border-[#34D1BF] blur-[80px]"></div>
+          <div className="h-56 w-56 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 opacity-20 blur-[80px]"></div>
         </div>
       </div>
     </footer>
