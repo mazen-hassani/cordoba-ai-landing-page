@@ -36,14 +36,6 @@ export default function Footer({ border = false }: { border?: boolean }) {
                   className="text-gray-600 transition hover:text-blue-600"
                   href="#0"
                 >
-                  API Docs
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="text-gray-600 transition hover:text-blue-600"
-                  href="#0"
-                >
                   Integrations
                 </Link>
               </li>
@@ -53,14 +45,6 @@ export default function Footer({ border = false }: { border?: boolean }) {
                   href="#0"
                 >
                   Security
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="text-gray-600 transition hover:text-blue-600"
-                  href="#0"
-                >
-                  Pricing
                 </Link>
               </li>
             </ul>
