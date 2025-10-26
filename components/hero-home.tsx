@@ -70,8 +70,8 @@ export default function HeroHome() {
               data-aos="zoom-y-out"
               data-aos-delay={150}
             >
-              Enterprise Software <br className="max-lg:hidden" />
-              Built for Scale
+              From idea to release—<br className="max-lg:hidden" />
+              powered by AI Agents.
             </h1>
             <div className="mx-auto max-w-3xl">
               <p
@@ -79,9 +79,7 @@ export default function HeroHome() {
                 data-aos="zoom-y-out"
                 data-aos-delay={300}
               >
-                Transform your business with AI-powered software development.
-                We deliver production-ready solutions that perform at scale,
-                with quality and speed that set new standards.
+                Work with our team to deliver your first production-ready build.
               </p>
               <div className="relative before:absolute before:inset-0 before:border-y before:[border-image:linear-gradient(to_right,transparent,--theme(--color-slate-300/.8),transparent)1]">
                 <div
@@ -91,20 +89,14 @@ export default function HeroHome() {
                 >
                   <a
                     className="btn group mb-4 w-full bg-gradient-to-r from-[#3B82F6] to-[#8B5CF6] bg-[length:100%_100%] bg-[bottom] text-white shadow-lg shadow-blue-500/50 hover:shadow-xl hover:shadow-blue-500/50 hover:scale-105 sm:mb-0 sm:w-auto font-semibold transition-all duration-300"
-                    href="#0"
+                    href="/contact"
                   >
                     <span className="relative inline-flex items-center">
-                      Start Building{" "}
+                      Talk to an expert{" "}
                       <span className="ml-1 tracking-normal transition-transform group-hover:translate-x-0.5">
                         →
                       </span>
                     </span>
-                  </a>
-                  <a
-                    className="btn w-full bg-white text-gray-900 shadow-sm hover:bg-gray-50 hover:scale-105 sm:ml-4 sm:w-auto border border-gray-200 transition-all duration-300"
-                    href="#0"
-                  >
-                    View Case Studies
                   </a>
                 </div>
               </div>
