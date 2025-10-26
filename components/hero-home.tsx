@@ -70,8 +70,7 @@ export default function HeroHome() {
               data-aos="zoom-y-out"
               data-aos-delay={150}
             >
-              From Al-Andalus to AI <br className="max-lg:hidden" />
-              Turning Knowledge into Outcomes
+              Welcome to Next Gen of Software
             </h1>
             <div className="mx-auto max-w-3xl">
               <p
