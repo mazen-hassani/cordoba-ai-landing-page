@@ -104,10 +104,24 @@ export default function HeroHome() {
                   </a>
                   <a
                     className="btn w-full bg-white text-gray-900 shadow-sm hover:bg-gray-50 hover:scale-105 sm:ml-4 sm:w-auto border border-gray-200 transition-all duration-300"
-                    href="#0"
+                    href="/contact"
                   >
                     {t("hero.cta2")}
                   </a>
+                </div>
+                {/* Badges */}
+                <div
+                  className="mt-6 flex flex-wrap items-center justify-center gap-3 text-sm text-gray-600"
+                  data-aos="zoom-y-out"
+                  data-aos-delay={600}
+                >
+                  <span className="inline-flex items-center">{t("hero.badge1")}</span>
+                  <span className="text-gray-400">•</span>
+                  <span className="inline-flex items-center">{t("hero.badge2")}</span>
+                  <span className="text-gray-400">•</span>
+                  <span className="inline-flex items-center">{t("hero.badge3")}</span>
+                  <span className="text-gray-400">•</span>
+                  <span className="inline-flex items-center">{t("hero.badge4")}</span>
                 </div>
               </div>
             </div>

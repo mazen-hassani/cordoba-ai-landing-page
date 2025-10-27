@@ -16,8 +16,8 @@ const cairo = Cairo({
 });
 
 export const metadata = {
-  title: "Cordoba AI - Enterprise Software Excellence",
-  description: "Build faster. Scale smarter. Deliver quality software that drives results.",
+  title: "Cordoba AI — AI-Powered Software. Enterprise-Grade Delivery.",
+  description: "Production-ready software at record speed. We combine AI agents, expert engineers, and proven processes to deliver secure, scalable solutions—from idea to launch in weeks, not months.",
 };
 
 export default function RootLayout({

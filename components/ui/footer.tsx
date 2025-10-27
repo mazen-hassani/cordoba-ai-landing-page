@@ -47,38 +47,7 @@ export default function Footer({ border = false }: { border?: boolean }) {
             </div>
           </div>
 
-          {/* 2nd block */}
-          <div className="space-y-2 sm:col-span-6 md:col-span-3 lg:col-span-2">
-            <h3 className="text-sm font-semibold text-gray-900">{t("footer.platform")}</h3>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <Link
-                  className="text-gray-600 transition hover:text-blue-600"
-                  href="#0"
-                >
-                  {t("footer.features")}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="text-gray-600 transition hover:text-blue-600"
-                  href="#0"
-                >
-                  {t("footer.integrations")}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="text-gray-600 transition hover:text-blue-600"
-                  href="#0"
-                >
-                  {t("footer.security")}
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* 3rd block */}
+          {/* 2nd block - Company */}
           <div className="space-y-2 sm:col-span-6 md:col-span-3 lg:col-span-2">
             <h3 className="text-sm font-semibold text-gray-900">{t("footer.company")}</h3>
             <ul className="space-y-2 text-sm">
@@ -93,6 +62,14 @@ export default function Footer({ border = false }: { border?: boolean }) {
               <li>
                 <Link
                   className="text-gray-600 transition hover:text-blue-600"
+                  href="#0"
+                >
+                  {t("footer.careers")}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="text-gray-600 transition hover:text-blue-600"
                   href="/contact"
                 >
                   {t("footer.contact")}
@@ -101,21 +78,21 @@ export default function Footer({ border = false }: { border?: boolean }) {
             </ul>
           </div>
 
-          {/* 4th block */}
+          {/* 3rd block - Legal */}
           <div className="space-y-2 sm:col-span-6 md:col-span-3 lg:col-span-2">
-            <h3 className="text-sm font-medium">{t("footer.resources")}</h3>
+            <h3 className="text-sm font-semibold text-gray-900">Legal</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
-                  className="text-gray-600 transition hover:text-gray-900"
+                  className="text-gray-600 transition hover:text-blue-600"
                   href="#0"
                 >
-                  {t("footer.community")}
+                  {t("footer.privacy")}
                 </Link>
               </li>
               <li>
                 <Link
-                  className="text-gray-600 transition hover:text-gray-900"
+                  className="text-gray-600 transition hover:text-blue-600"
                   href="#0"
                 >
                   {t("footer.terms")}
@@ -123,18 +100,18 @@ export default function Footer({ border = false }: { border?: boolean }) {
               </li>
               <li>
                 <Link
-                  className="text-gray-600 transition hover:text-gray-900"
+                  className="text-gray-600 transition hover:text-blue-600"
                   href="#0"
                 >
-                  {t("footer.vulnerability")}
+                  {t("footer.security")}
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* 5th block */}
+          {/* 4th block - Social */}
           <div className="space-y-2 sm:col-span-6 md:col-span-3 lg:col-span-2">
-            <h3 className="text-sm font-medium">{t("footer.social")}</h3>
+            <h3 className="text-sm font-semibold text-gray-900">Social</h3>
             <ul className="flex gap-1">
               <li>
                 <Link
