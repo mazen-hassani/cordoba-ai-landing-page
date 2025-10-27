@@ -193,18 +193,17 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
   };
 
   const updateHTMLAttributes = (lang: Language) => {
-    document.documentElement.lang = lang;
-    document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+    if (typeof document !== "undefined") {
+      document.documentElement.lang = lang;
+      document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+    }
   };
 
   const t = (key: string): string => {
     return translations[language][key] || key;
   };
 
-  if (!mounted) {
-    return <>{children}</>;
-  }
-
+  // Always provide the context, even during SSR
   return (
     <LanguageContext.Provider value={{ language, setLanguage, t }}>
       {children}
