@@ -90,11 +90,11 @@ export default function Outcomes() {
 
           {/* Testimonial */}
           <div
-            className="relative mx-auto max-w-3xl mt-16 md:mt-24"
+            className="relative mx-auto max-w-3xl mt-10 md:mt-14"
             data-aos="fade-up"
             data-aos-delay={300}
           >
-            <div className="rounded-2xl bg-gradient-to-br from-blue-50 to-purple-50 p-8 md:p-12 border border-blue-100 shadow-xl">
+            <div className="rounded-2xl bg-gradient-to-br from-blue-50 to-purple-50 p-8 md:p-12 border border-blue-100 shadow-lg">
               <div className="mb-6">
                 <svg
                   className="h-8 w-8 text-blue-500"
