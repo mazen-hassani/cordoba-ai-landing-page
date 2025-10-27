@@ -10,6 +10,7 @@
 
 @theme {
   --font-inter: Inter, sans-serif;
+  --font-cairo: Cairo, sans-serif;
   --font-mono: Roboto Mono, monospace;
 
   /* Modern Professional Color Palette */
@@ -213,5 +214,10 @@
   ::backdrop,
   ::file-selector-button {
     border-color: var(--color-gray-200, currentColor);
+  }
+
+  /* Apply Cairo font for Arabic (RTL) */
+  html[dir="rtl"] body {
+    font-family: var(--font-cairo);
   }
 }
