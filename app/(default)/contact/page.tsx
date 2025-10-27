@@ -19,6 +19,8 @@ export default function Contact() {
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [referenceId, setReferenceId] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState("");
 
   const projectTypes = [
     t("contact.projectTypeOption1"),
@@ -87,8 +89,9 @@ export default function Contact() {
     validateField(name, type === "checkbox" ? checked : value);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setSubmitError("");
 
     // Validate all fields
     validateField("name", formData.name);
@@ -99,13 +102,31 @@ export default function Contact() {
 
     // Check if there are any errors
     if (Object.keys(errors).length === 0 && formData.consent) {
-      // Generate reference ID
-      const ref = `REF-${Date.now().toString(36).toUpperCase()}`;
-      setReferenceId(ref);
-      setIsSubmitted(true);
+      setIsSubmitting(true);
 
-      // Here you would normally send the data to your API
-      console.log("Form submitted:", formData);
+      try {
+        const response = await fetch("/api/contact", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        });
+
+        const data = await response.json();
+
+        if (response.ok && data.success) {
+          setReferenceId(data.referenceId);
+          setIsSubmitted(true);
+        } else {
+          setSubmitError(data.error || "Failed to send message. Please try again.");
+        }
+      } catch (error) {
+        console.error("Form submission error:", error);
+        setSubmitError("Network error. Please check your connection and try again.");
+      } finally {
+        setIsSubmitting(false);
+      }
     }
   };
 
@@ -399,12 +420,60 @@ export default function Contact() {
                   </p>
                 )}
 
+                {/* General Error Message */}
+                {submitError && (
+                  <div className="rounded-lg bg-red-50 border border-red-200 p-4" role="alert">
+                    <div className="flex items-start gap-3">
+                      <svg
+                        className="h-5 w-5 text-red-600 flex-shrink-0 mt-0.5"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        aria-hidden="true"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.28 7.22a.75.75 0 00-1.06 1.06L8.94 10l-1.72 1.72a.75.75 0 101.06 1.06L10 11.06l1.72 1.72a.75.75 0 101.06-1.06L11.06 10l1.72-1.72a.75.75 0 00-1.06-1.06L10 8.94 8.28 7.22z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                      <p className="text-sm text-red-800">{submitError}</p>
+                    </div>
+                  </div>
+                )}
+
                 {/* Submit Button */}
                 <button
                   type="submit"
-                  className="w-full btn-sm bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg shadow-blue-500/50 hover:shadow-xl hover:scale-105 focus:ring-4 focus:ring-blue-500/50 font-semibold transition-all duration-300 py-3"
+                  disabled={isSubmitting}
+                  className="w-full btn-sm bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg shadow-blue-500/50 hover:shadow-xl hover:scale-105 focus:ring-4 focus:ring-blue-500/50 font-semibold transition-all duration-300 py-3 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
                 >
-                  {t("contact.submit")}
+                  {isSubmitting ? (
+                    <span className="flex items-center justify-center gap-2">
+                      <svg
+                        className="animate-spin h-5 w-5"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                      >
+                        <circle
+                          className="opacity-25"
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke="currentColor"
+                          strokeWidth="4"
+                        ></circle>
+                        <path
+                          className="opacity-75"
+                          fill="currentColor"
+                          d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                        ></path>
+                      </svg>
+                      Sending...
+                    </span>
+                  ) : (
+                    t("contact.submit")
+                  )}
                 </button>
 
                 {/* Privacy Notice */}
