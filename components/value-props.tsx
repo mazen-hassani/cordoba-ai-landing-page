@@ -38,10 +38,10 @@ export default function ValueProps() {
                   <path d="M13 2L3 14h9l-1 6 10-12h-9l1-6z" />
                 </svg>
               </div>
-              <h3 className="mb-2 text-lg font-bold text-gray-900">
+              <h3 className="mb-2 text-lg font-bold text-gray-900 leading-tight">
                 {t("valueProps.speed")}
               </h3>
-              <p className="text-sm text-gray-600 leading-relaxed">
+              <p className="text-base text-gray-600 leading-relaxed">
                 {t("valueProps.speedDesc")}
               </p>
             </article>
@@ -67,10 +67,10 @@ export default function ValueProps() {
                   <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11" />
                 </svg>
               </div>
-              <h3 className="mb-2 text-lg font-bold text-gray-900">
+              <h3 className="mb-2 text-lg font-bold text-gray-900 leading-tight">
                 {t("valueProps.quality")}
               </h3>
-              <p className="text-sm text-gray-600 leading-relaxed">
+              <p className="text-base text-gray-600 leading-relaxed">
                 {t("valueProps.qualityDesc")}
               </p>
             </article>
@@ -95,10 +95,10 @@ export default function ValueProps() {
                   <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
                 </svg>
               </div>
-              <h3 className="mb-2 text-lg font-bold text-gray-900">
+              <h3 className="mb-2 text-lg font-bold text-gray-900 leading-tight">
                 {t("valueProps.security")}
               </h3>
-              <p className="text-sm text-gray-600 leading-relaxed">
+              <p className="text-base text-gray-600 leading-relaxed">
                 {t("valueProps.securityDesc")}
               </p>
             </article>
@@ -125,10 +125,10 @@ export default function ValueProps() {
                   <line x1={12} y1={22.08} x2={12} y2={12} />
                 </svg>
               </div>
-              <h3 className="mb-2 text-lg font-bold text-gray-900">
+              <h3 className="mb-2 text-lg font-bold text-gray-900 leading-tight">
                 {t("valueProps.scale")}
               </h3>
-              <p className="text-sm text-gray-600 leading-relaxed">
+              <p className="text-base text-gray-600 leading-relaxed">
                 {t("valueProps.scaleDesc")}
               </p>
             </article>

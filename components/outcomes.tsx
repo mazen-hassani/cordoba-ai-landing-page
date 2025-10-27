@@ -32,19 +32,18 @@ export default function Outcomes() {
           </div>
 
           {/* KPIs */}
-          <dl className="grid gap-8 sm:grid-cols-3 mb-16" role="list">
+          <dl className="grid gap-8 sm:grid-cols-3 mb-16 divide-x-0 sm:divide-x divide-gray-200">
             {kpis.map((kpi, index) => (
               <div
                 key={index}
-                className="text-center"
+                className="text-center px-4"
                 data-aos="fade-up"
                 data-aos-delay={index * 100}
-                role="listitem"
               >
-                <dt className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent md:text-5xl">
+                <dt className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent md:text-5xl mb-3">
                   {kpi.value}
                 </dt>
-                <dd className="mt-2 text-sm text-gray-600 font-medium">
+                <dd className="text-sm text-gray-600 font-medium leading-relaxed">
                   {kpi.label}
                 </dd>
               </div>

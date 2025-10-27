@@ -7,36 +7,36 @@ export default function Engagements() {
 
   const projects = [
     {
-      title: t("engagements.innovation"),
-      description: t("engagements.innovationDesc"),
+      title: t("engagements.portfolio"),
+      description: t("engagements.portfolioDesc"),
       bullets: [
-        t("engagements.innovationBullet1"),
-        t("engagements.innovationBullet2"),
-        t("engagements.innovationBullet3"),
+        t("engagements.portfolioBullet1"),
+        t("engagements.portfolioBullet2"),
+        t("engagements.portfolioBullet3"),
       ],
       gradient: "from-blue-500 to-cyan-500",
       iconBg: "from-blue-500 to-cyan-600",
       borderColor: "hover:border-blue-200",
     },
     {
-      title: t("engagements.pmo"),
-      description: t("engagements.pmoDesc"),
+      title: t("engagements.ticketing"),
+      description: t("engagements.ticketingDesc"),
       bullets: [
-        t("engagements.pmoBullet1"),
-        t("engagements.pmoBullet2"),
-        t("engagements.pmoBullet3"),
+        t("engagements.ticketingBullet1"),
+        t("engagements.ticketingBullet2"),
+        t("engagements.ticketingBullet3"),
       ],
       gradient: "from-purple-500 to-pink-500",
       iconBg: "from-purple-500 to-pink-600",
       borderColor: "hover:border-purple-200",
     },
     {
-      title: t("engagements.citizen"),
-      description: t("engagements.citizenDesc"),
+      title: t("engagements.cms"),
+      description: t("engagements.cmsDesc"),
       bullets: [
-        t("engagements.citizenBullet1"),
-        t("engagements.citizenBullet2"),
-        t("engagements.citizenBullet3"),
+        t("engagements.cmsBullet1"),
+        t("engagements.cmsBullet2"),
+        t("engagements.cmsBullet3"),
       ],
       gradient: "from-green-500 to-emerald-500",
       iconBg: "from-green-500 to-emerald-600",
@@ -83,10 +83,10 @@ export default function Engagements() {
                 </div>
 
                 {/* Title and description */}
-                <h3 className="mb-3 text-xl font-bold text-gray-900">
+                <h3 className="mb-3 text-xl font-bold text-gray-900 leading-tight">
                   {project.title}
                 </h3>
-                <p className="mb-6 text-sm text-gray-600 leading-relaxed">
+                <p className="mb-6 text-sm text-gray-600 leading-relaxed min-h-[2.5rem]">
                   {project.description}
                 </p>
 
