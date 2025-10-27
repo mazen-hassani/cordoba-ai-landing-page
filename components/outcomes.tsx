@@ -90,7 +90,7 @@ export default function Outcomes() {
 
           {/* Testimonial */}
           <div
-            className="relative mx-auto max-w-3xl"
+            className="relative mx-auto max-w-3xl mt-16 md:mt-24"
             data-aos="fade-up"
             data-aos-delay={300}
           >
