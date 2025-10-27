@@ -29,10 +29,6 @@ export default function Cta() {
           <div className="px-4 py-16 md:px-12 md:py-24">
             <h2 className="mb-6 text-4xl font-bold text-gray-900 md:text-5xl lg:text-6xl">
               {t("cta.title")}
-              <br />
-              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                {t("cta.titleSub")}
-              </span>
             </h2>
             <p className="mx-auto mb-10 max-w-2xl text-lg text-gray-600 leading-relaxed md:text-xl">
               {t("cta.description")}
