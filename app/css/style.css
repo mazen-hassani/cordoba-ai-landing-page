@@ -217,7 +217,8 @@
   }
 
   /* Apply Cairo font for Arabic (RTL) */
-  html[dir="rtl"] body {
-    font-family: var(--font-cairo);
+  html[dir="rtl"] body,
+  html[dir="rtl"] body * {
+    font-family: var(--font-cairo) !important;
   }
 }
