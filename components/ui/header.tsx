@@ -1,11 +1,14 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import Logo from "./logo";
 import { useLanguage } from "@/lib/LanguageContext";
 
 export default function Header() {
   const { t } = useLanguage();
+  const [isProductsOpen, setIsProductsOpen] = useState(false);
+
   return (
     <header className="fixed top-2 z-30 w-full md:top-6">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
@@ -15,7 +18,69 @@ export default function Header() {
             <Logo />
           </div>
 
-          {/* Desktop sign in links */}
+          {/* Navigation */}
+          <nav className="hidden md:flex items-center gap-6">
+            <div className="relative">
+              <button
+                onClick={() => setIsProductsOpen(!isProductsOpen)}
+                onMouseEnter={() => setIsProductsOpen(true)}
+                onMouseLeave={() => setIsProductsOpen(false)}
+                className="text-sm font-medium text-gray-700 hover:text-blue-600 transition-colors duration-200 flex items-center gap-1"
+              >
+                {t("engagements.title")}
+                <svg
+                  className={`h-4 w-4 transition-transform ${isProductsOpen ? "rotate-180" : ""}`}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </button>
+              {isProductsOpen && (
+                <div
+                  onMouseEnter={() => setIsProductsOpen(true)}
+                  onMouseLeave={() => setIsProductsOpen(false)}
+                  className="absolute top-full mt-2 w-64 rounded-xl bg-white shadow-xl border border-gray-100 py-2"
+                >
+                  <Link
+                    href="/portfolio-manager"
+                    className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors"
+                  >
+                    <div className="font-semibold">{t("engagements.portfolio")}</div>
+                    <div className="text-xs text-gray-500 mt-0.5">
+                      {t("engagements.portfolioDesc").substring(0, 50)}...
+                    </div>
+                  </Link>
+                  <Link
+                    href="/ticketing-system"
+                    className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors"
+                  >
+                    <div className="font-semibold">{t("engagements.ticketing")}</div>
+                    <div className="text-xs text-gray-500 mt-0.5">
+                      {t("engagements.ticketingDesc").substring(0, 50)}...
+                    </div>
+                  </Link>
+                  <Link
+                    href="/ai-cms"
+                    className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors"
+                  >
+                    <div className="font-semibold">{t("engagements.cms")}</div>
+                    <div className="text-xs text-gray-500 mt-0.5">
+                      {t("engagements.cmsDesc").substring(0, 50)}...
+                    </div>
+                  </Link>
+                </div>
+              )}
+            </div>
+          </nav>
+
+          {/* Desktop CTA */}
           <ul className="flex flex-1 items-center justify-end gap-3">
             <li>
               <Link

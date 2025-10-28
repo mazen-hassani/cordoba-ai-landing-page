@@ -69,7 +69,7 @@ export async function POST(request: NextRequest) {
 
     // Parse request body
     const body = await request.json();
-    const { name, email, organization, phone, projectType, message, consent } = body;
+    const { name, email, organization, phone, projectType, message, consent, utm_product, utm_cta } = body;
 
     // Validate required fields
     if (!name || !email || !organization || !message || !consent) {
@@ -116,6 +116,8 @@ export async function POST(request: NextRequest) {
       phone: phone ? sanitizeInput(phone) : "Not provided",
       projectType: projectType || "Not specified",
       message: sanitizeInput(message),
+      utm_product: utm_product ? sanitizeInput(utm_product) : "Not tracked",
+      utm_cta: utm_cta ? sanitizeInput(utm_cta) : "Not tracked",
     };
 
     // Generate reference ID
@@ -174,6 +176,14 @@ export async function POST(request: NextRequest) {
                 <div class="field">
                   <div class="label">Message:</div>
                   <div class="value">${sanitizedData.message.replace(/\n/g, '<br>')}</div>
+                </div>
+                <div class="field">
+                  <div class="label">Source Product:</div>
+                  <div class="value">${sanitizedData.utm_product}</div>
+                </div>
+                <div class="field">
+                  <div class="label">CTA Location:</div>
+                  <div class="value">${sanitizedData.utm_cta}</div>
                 </div>
                 <div class="footer">
                   <p>This email was sent from the Cordoba AI contact form.</p>

@@ -1,18 +1,32 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import { useLanguage } from "@/lib/LanguageContext";
 
 export default function Contact() {
   const { t } = useLanguage();
+  const searchParams = useSearchParams();
+  const product = searchParams.get("product");
+  const cta = searchParams.get("cta");
+
+  // Map product ID to project type
+  const productToProjectType: Record<string, string> = {
+    "portfolio-manager": t("contact.projectTypeOption1"),
+    "ticketing-system": t("contact.projectTypeOption2"),
+    "ai-cms": t("contact.projectTypeOption3"),
+  };
+
+  const defaultProjectType = product ? productToProjectType[product] || "" : "";
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     organization: "",
     phone: "",
-    projectType: "",
+    projectType: defaultProjectType,
     message: "",
     consent: false,
   });
@@ -21,6 +35,16 @@ export default function Contact() {
   const [referenceId, setReferenceId] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState("");
+
+  // Update projectType when product param changes
+  useEffect(() => {
+    if (product && productToProjectType[product]) {
+      setFormData((prev) => ({
+        ...prev,
+        projectType: productToProjectType[product],
+      }));
+    }
+  }, [product]);
 
   const projectTypes = [
     t("contact.projectTypeOption1"),
@@ -110,7 +134,11 @@ export default function Contact() {
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify(formData),
+          body: JSON.stringify({
+            ...formData,
+            utm_product: product || "",
+            utm_cta: cta || "",
+          }),
         });
 
         const data = await response.json();
@@ -227,6 +255,10 @@ export default function Contact() {
             {/* Contact Form */}
             <div className="bg-white rounded-2xl shadow-lg p-8">
               <form onSubmit={handleSubmit} className="space-y-5" noValidate>
+                {/* Hidden UTM fields */}
+                <input type="hidden" name="utm_product" value={product || ""} />
+                <input type="hidden" name="utm_cta" value={cta || ""} />
+
                 {/* Name & Email Row */}
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div>
