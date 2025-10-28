@@ -223,7 +223,7 @@ const translations: Record<Language, Record<string, string>> = {
     "outcomes.kpi3": "أسرع 30–50%",
     "outcomes.kpi3Desc": "بفضل عوامل الذكاء الاصطناعي",
     "outcomes.quote": "ما بين الفكرة والإطلاق... ستة أسابيع فقط.\nوفّرت Cordoba AI ما يتجاوز الحلّ — قدّمت تجربة ابتكار ذكية غيّرت توقّعاتنا تمامًا.",
-    "outcomes.quoteAuthor": "مدير التكنولوجيا",
+    "outcomes.quoteAuthor": "Chief Technology Officer",
     "outcomes.quoteCompany": "كيان حكومي في دول مجلس التعاون الخليجي",
 
     // Featured Engagements
