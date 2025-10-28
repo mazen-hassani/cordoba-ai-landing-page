@@ -65,7 +65,7 @@ export default function Engagements() {
               <li key={index} className="h-full">
                 <Link
                   href={project.href}
-                  className="group flex h-full flex-col rounded-2xl border border-gray-100 bg-white p-6 shadow-sm transition-all duration-300 hover:shadow-2xl focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 dark:border-white/10 dark:bg-slate-900"
+                  className="group flex h-full flex-col rounded-3xl bg-white text-slate-900 border border-slate-200/70 dark:bg-white dark:text-slate-900 dark:border-slate-200/20 p-6 shadow-sm hover:shadow-md transition focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2"
                   onClick={() => {
                     if (typeof window !== "undefined" && (window as any).analytics) {
                       (window as any).analytics.track("card_clicked", { card: project.title, to: project.href });
@@ -76,7 +76,7 @@ export default function Engagements() {
                 >
                   {/* Icon */}
                   <div
-                    className={`mb-6 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br ${project.iconBg} text-white shadow-lg group-hover:scale-110 transition-transform duration-300`}
+                    className={`mb-6 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br ${project.iconBg} text-white shadow-sm group-hover:shadow-md group-hover:scale-110 transition duration-300`}
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -93,10 +93,10 @@ export default function Engagements() {
                   </div>
 
                   {/* Title and description */}
-                  <h3 className="mb-3 text-xl font-bold text-gray-900 leading-tight dark:text-white">
+                  <h3 className="mb-3 text-xl font-bold text-slate-900 leading-tight">
                     {project.title}
                   </h3>
-                  <p className="mb-6 text-sm text-gray-600 leading-relaxed dark:text-slate-300">
+                  <p className="mb-6 text-sm text-slate-600 leading-relaxed">
                     {project.description}
                   </p>
 
@@ -117,7 +117,7 @@ export default function Engagements() {
                             d="M5 13l4 4L19 7"
                           />
                         </svg>
-                        <span className="text-sm text-gray-700 leading-relaxed dark:text-slate-200">
+                        <span className="text-sm text-slate-700 leading-relaxed">
                           {bullet}
                         </span>
                       </li>
@@ -125,7 +125,7 @@ export default function Engagements() {
                   </ul>
 
                   {/* Learn More link */}
-                  <div className="mt-auto pt-5 border-t border-gray-100 dark:border-white/10">
+                  <div className="mt-auto pt-5 border-t border-slate-200/70">
                     <span className="inline-flex items-center font-medium text-indigo-600 group-hover:translate-x-0.5 transition">
                       <span className="text-sm font-semibold">{t("engagements.learnMore")}</span>
                       <svg
