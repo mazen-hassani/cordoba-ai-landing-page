@@ -1,12 +1,12 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { Suspense, useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import { useLanguage } from "@/lib/LanguageContext";
 
-export default function Contact() {
+function ContactFormContent() {
   const { t } = useLanguage();
   const searchParams = useSearchParams();
   const product = searchParams.get("product");
@@ -636,5 +636,26 @@ export default function Contact() {
         </div>
       </div>
     </section>
+  );
+}
+
+export default function Contact() {
+  return (
+    <Suspense fallback={
+      <section className="relative">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+          <div className="py-12 md:py-20">
+            <div className="mx-auto max-w-3xl text-center">
+              <div className="animate-pulse">
+                <div className="h-12 bg-gray-200 rounded-lg mb-4 mx-auto w-64"></div>
+                <div className="h-6 bg-gray-200 rounded-lg mb-6 mx-auto w-96"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    }>
+      <ContactFormContent />
+    </Suspense>
   );
 }
