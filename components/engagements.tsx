@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useLanguage } from "@/lib/LanguageContext";
 
 export default function Engagements() {
@@ -17,6 +18,7 @@ export default function Engagements() {
       gradient: "from-blue-500 to-cyan-500",
       iconBg: "from-blue-500 to-cyan-600",
       borderColor: "hover:border-blue-200",
+      href: "/portfolio-manager",
     },
     {
       title: t("engagements.ticketing"),
@@ -29,6 +31,7 @@ export default function Engagements() {
       gradient: "from-purple-500 to-pink-500",
       iconBg: "from-purple-500 to-pink-600",
       borderColor: "hover:border-purple-200",
+      href: "/ticketing-system",
     },
     {
       title: t("engagements.cms"),
@@ -41,6 +44,7 @@ export default function Engagements() {
       gradient: "from-green-500 to-emerald-500",
       iconBg: "from-green-500 to-emerald-600",
       borderColor: "hover:border-green-200",
+      href: "/ai-cms",
     },
   ];
 
@@ -59,8 +63,10 @@ export default function Engagements() {
           <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 auto-rows-fr">
             {projects.map((project, index) => (
               <li key={index} className="h-full">
-                <article
-                  className={`group flex h-full flex-col rounded-2xl bg-white p-6 shadow-sm hover:shadow-2xl transition-all duration-300 border border-gray-100 ${project.borderColor}`}
+                <Link
+                  href={project.href}
+                  className="group flex h-full flex-col rounded-2xl border border-gray-100 bg-white p-6 shadow-sm transition-all duration-300 hover:shadow-2xl focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 dark:border-white/10 dark:bg-slate-900"
+                  onClick={() => window?.analytics?.track?.("card_clicked", { card: project.title, to: project.href })}
                   data-aos="fade-up"
                   data-aos-delay={index * 100}
                 >
@@ -83,10 +89,10 @@ export default function Engagements() {
                   </div>
 
                   {/* Title and description */}
-                  <h3 className="mb-3 text-xl font-bold text-gray-900 leading-tight">
+                  <h3 className="mb-3 text-xl font-bold text-gray-900 leading-tight dark:text-white">
                     {project.title}
                   </h3>
-                  <p className="mb-6 text-sm text-gray-600 leading-relaxed">
+                  <p className="mb-6 text-sm text-gray-600 leading-relaxed dark:text-slate-300">
                     {project.description}
                   </p>
 
@@ -95,7 +101,7 @@ export default function Engagements() {
                     {project.bullets.map((bullet, bulletIndex) => (
                       <li key={bulletIndex} className="flex items-start gap-3">
                         <svg
-                          className="mt-0.5 h-5 w-5 flex-shrink-0 text-blue-500"
+                          className="mt-0.5 h-5 w-5 flex-shrink-0 text-indigo-600"
                           fill="none"
                           stroke="currentColor"
                           strokeWidth={2}
@@ -107,22 +113,19 @@ export default function Engagements() {
                             d="M5 13l4 4L19 7"
                           />
                         </svg>
-                        <span className="text-sm text-gray-700 leading-relaxed">
+                        <span className="text-sm text-gray-700 leading-relaxed dark:text-slate-200">
                           {bullet}
                         </span>
                       </li>
                     ))}
                   </ul>
 
-                  {/* Optional Learn More link */}
-                  <div className="mt-auto pt-5 border-t border-gray-100">
-                    <a
-                      className="group/link inline-flex items-center font-medium text-gray-400 cursor-not-allowed"
-                      aria-label="Learn more (coming soon)"
-                    >
+                  {/* Learn More link */}
+                  <div className="mt-auto pt-5 border-t border-gray-100 dark:border-white/10">
+                    <span className="inline-flex items-center font-medium text-indigo-600 group-hover:translate-x-0.5 transition">
                       <span className="text-sm font-semibold">{t("engagements.learnMore")}</span>
                       <svg
-                        className={`ms-1 size-4 ${language === "ar" ? "rotate-180" : ""} transition-transform group-hover/link:translate-x-0.5 ${language === "ar" ? "group-hover/link:-translate-x-0.5" : ""}`}
+                        className={`ms-1 size-4 ${language === "ar" ? "rotate-180" : ""}`}
                         viewBox="0 0 24 24"
                         fill="none"
                       >
@@ -134,9 +137,9 @@ export default function Engagements() {
                           strokeLinejoin="round"
                         />
                       </svg>
-                    </a>
+                    </span>
                   </div>
-                </article>
+                </Link>
               </li>
             ))}
           </ul>
