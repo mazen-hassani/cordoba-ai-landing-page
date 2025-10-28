@@ -5,7 +5,7 @@ import Logo from "./logo";
 import { useLanguage } from "@/lib/LanguageContext";
 
 export default function Footer({ border = false }: { border?: boolean }) {
-  const { language, setLanguage, t } = useLanguage();
+  const { t } = useLanguage();
   return (
     <footer>
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
@@ -20,30 +20,6 @@ export default function Footer({ border = false }: { border?: boolean }) {
             </div>
             <div className="text-sm text-gray-600">
               &copy; {t("footer.rights")}
-            </div>
-            {/* Language Switcher */}
-            <div className="flex items-center gap-2 pt-4">
-              <span className="text-sm font-semibold text-gray-900">{t("footer.language")}:</span>
-              <button
-                onClick={() => setLanguage("en")}
-                className={`px-3 py-1 text-sm rounded-lg transition-all duration-300 ${
-                  language === "en"
-                    ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-md"
-                    : "bg-gray-100 text-gray-600 hover:bg-gray-200"
-                }`}
-              >
-                English
-              </button>
-              <button
-                onClick={() => setLanguage("ar")}
-                className={`px-3 py-1 text-sm rounded-lg transition-all duration-300 ${
-                  language === "ar"
-                    ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-md"
-                    : "bg-gray-100 text-gray-600 hover:bg-gray-200"
-                }`}
-              >
-                العربية
-              </button>
             </div>
           </div>
 
