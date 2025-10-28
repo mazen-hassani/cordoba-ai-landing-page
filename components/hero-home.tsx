@@ -11,7 +11,7 @@ import Avatar06 from "@/public/images/avatar-06.jpg";
 import { useLanguage } from "@/lib/LanguageContext";
 
 export default function HeroHome() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   return (
     <section className="relative">
       <PageIllustration />
@@ -87,7 +87,7 @@ export default function HeroHome() {
               </p>
               <div className="relative before:absolute before:inset-0 before:border-y before:[border-image:linear-gradient(to_right,transparent,--theme(--color-slate-300/.8),transparent)1]">
                 <div
-                  className="mx-auto max-w-xs sm:flex sm:max-w-none sm:justify-center"
+                  className="mx-auto max-w-xs sm:flex sm:max-w-none sm:justify-center gap-3 sm:gap-4"
                   data-aos="zoom-y-out"
                   data-aos-delay={450}
                 >
@@ -95,15 +95,15 @@ export default function HeroHome() {
                     className="btn group mb-4 w-full bg-gradient-to-r from-[#3B82F6] to-[#8B5CF6] bg-[length:100%_100%] bg-[bottom] text-white shadow-lg shadow-blue-500/50 hover:shadow-xl hover:shadow-blue-500/50 hover:scale-105 sm:mb-0 sm:w-auto font-semibold transition-all duration-300"
                     href="/contact"
                   >
-                    <span className="relative inline-flex items-center">
-                      {t("hero.cta1")}{" "}
-                      <span className="ml-1 tracking-normal transition-transform group-hover:translate-x-0.5">
-                        →
-                      </span>
+                    <span className="relative inline-flex items-center gap-2">
+                      {t("hero.cta1")}
+                      <svg className={`size-4 ${language === "ar" ? "rotate-180" : ""} transition-transform group-hover:translate-x-0.5`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                      </svg>
                     </span>
                   </a>
                   <a
-                    className="btn w-full bg-white text-gray-900 shadow-sm hover:bg-gray-50 hover:scale-105 sm:ml-4 sm:w-auto border border-gray-200 transition-all duration-300"
+                    className="btn w-full bg-white text-gray-900 shadow-sm hover:bg-gray-50 hover:scale-105 sm:w-auto border border-gray-200 transition-all duration-300"
                     href="/contact"
                   >
                     {t("hero.cta2")}
@@ -111,7 +111,7 @@ export default function HeroHome() {
                 </div>
                 {/* Badges */}
                 <div
-                  className="mt-6 flex flex-wrap items-center justify-center gap-3 text-sm text-gray-600"
+                  className="mt-5 md:mt-7 flex flex-wrap items-center justify-center gap-3 text-sm text-gray-600"
                   data-aos="zoom-y-out"
                   data-aos-delay={600}
                 >

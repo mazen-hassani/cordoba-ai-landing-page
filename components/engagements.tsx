@@ -121,7 +121,7 @@ export default function Engagements() {
                     disabled
                     aria-label="Learn more (coming soon)"
                   >
-                    Learn more →
+                    {t("engagements.learnMore")} →
                   </button>
                 </div>
               </article>

@@ -83,6 +83,7 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Featured Engagements
     "engagements.title": "Selected engagements",
+    "engagements.learnMore": "Learn more",
     "engagements.portfolio": "Portfolio Manager",
     "engagements.portfolioDesc": "Enterprise portfolio & project governance with real-time visibility and control.",
     "engagements.portfolioBullet1": "Strategy alignment, prioritization & funding gates",
@@ -226,6 +227,7 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Featured Engagements
     "engagements.title": "مشاريع مختارة",
+    "engagements.learnMore": "اعرف المزيد",
     "engagements.portfolio": "سِياق",
     "engagements.portfolioDesc": "حوكمة محفظة المشاريع المؤسسية مع رؤية وتحكم في الوقت الفعلي.",
     "engagements.portfolioBullet1": "مواءمة الاستراتيجية، الأولويات وبوابات التمويل",
