@@ -66,7 +66,11 @@ export default function Engagements() {
                 <Link
                   href={project.href}
                   className="group flex h-full flex-col rounded-2xl border border-gray-100 bg-white p-6 shadow-sm transition-all duration-300 hover:shadow-2xl focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 dark:border-white/10 dark:bg-slate-900"
-                  onClick={() => window?.analytics?.track?.("card_clicked", { card: project.title, to: project.href })}
+                  onClick={() => {
+                    if (typeof window !== "undefined" && (window as any).analytics) {
+                      (window as any).analytics.track("card_clicked", { card: project.title, to: project.href });
+                    }
+                  }}
                   data-aos="fade-up"
                   data-aos-delay={index * 100}
                 >
