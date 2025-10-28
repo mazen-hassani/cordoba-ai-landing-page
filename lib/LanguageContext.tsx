@@ -228,7 +228,7 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Featured Engagements
     "engagements.title": "مشاريع مختارة",
-    "engagements.portfolio": "سياق",
+    "engagements.portfolio": "سِياق",
     "engagements.portfolioDesc": "حوكمة محفظة المشاريع المؤسسية مع رؤية وتحكم في الوقت الفعلي.",
     "engagements.portfolioBullet1": "مواءمة الاستراتيجية، الأولويات وبوابات التمويل",
     "engagements.portfolioBullet2": "سجلات الصحة والمخاطر والقضايا مع سير العمل",
