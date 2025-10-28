@@ -125,7 +125,7 @@ export async function POST(request: NextRequest) {
 
     // Send email using Resend
     const { data, error } = await resend.emails.send({
-      from: "Cordoba AI Contact Form <noreply@cordoba-ai.com>",
+      from: "Cordoba AI Contact Form <onboarding@resend.dev>",
       to: ["info@cordoba-ai.com"],
       replyTo: sanitizedData.email,
       subject: `New Contact Form Submission - ${sanitizedData.projectType}`,
