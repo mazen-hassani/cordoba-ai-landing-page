@@ -50,7 +50,7 @@ export default function Outcomes() {
               {t("outcomes.title")}
             </h2>
             <p className="text-lg text-gray-600">
-              Proven delivery windows, reliability targets, and real speed gains—without compromising quality.
+              {t("outcomes.subtitle")}
             </p>
           </div>
 

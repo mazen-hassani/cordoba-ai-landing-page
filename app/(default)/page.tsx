@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "Cordoba AI — AI-Powered Software. Enterprise-Grade Delivery.",
-  description: "Production-ready software at record speed. We combine AI agents, expert engineers, and proven processes to deliver secure, scalable solutions—from idea to launch in weeks, not months.",
+  title: "Cordoba AI — AI-Powered Software | برمجيات مدعومة بالذكاء الاصطناعي",
+  description: "Production-ready software at record speed | نطوّر برمجيات جاهزة للإنتاج بسرعة قياسية—من دون التنازل عن الأمان أو الجودة أو المعايير.",
 };
 
 import Hero from "@/components/hero-home";

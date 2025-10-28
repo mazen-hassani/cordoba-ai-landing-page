@@ -18,6 +18,18 @@ const cairo = Cairo({
 export const metadata = {
   title: "Cordoba AI — AI-Powered Software. Enterprise-Grade Delivery.",
   description: "Production-ready software at record speed. We combine AI agents, expert engineers, and proven processes to deliver secure, scalable solutions—from idea to launch in weeks, not months.",
+  alternates: {
+    languages: {
+      'en': '/',
+      'ar': '/',
+    },
+  },
+  openGraph: {
+    title: "Cordoba AI — AI-Powered Software. Enterprise-Grade Delivery.",
+    description: "Production-ready software at record speed. We combine AI agents, expert engineers, and proven processes to deliver secure, scalable solutions—from idea to launch in weeks, not months.",
+    locale: 'en_US',
+    alternateLocale: 'ar_AE',
+  },
 };
 
 export default function RootLayout({
