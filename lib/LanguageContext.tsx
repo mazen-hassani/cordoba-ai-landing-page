@@ -80,7 +80,6 @@ const translations: Record<Language, Record<string, string>> = {
     "outcomes.kpi3Desc": "delivery via AI agents + automation",
     "outcomes.quote": "Cordoba AI delivered our innovation platform in 6 weeks. Their AI-powered approach and expert team exceeded our expectations.",
     "outcomes.quoteAuthor": "Technology Director",
-    "outcomes.quoteCompany": "GCC Government Entity",
 
     // Featured Engagements
     "engagements.title": "Selected engagements",
@@ -224,7 +223,6 @@ const translations: Record<Language, Record<string, string>> = {
     "outcomes.kpi3Desc": "بفضل عوامل الذكاء الاصطناعي",
     "outcomes.quote": "ما بين الفكرة والإطلاق... ستة أسابيع فقط.\nوفّرت Cordoba AI ما يتجاوز الحلّ — قدّمت تجربة ابتكار ذكية غيّرت توقّعاتنا تمامًا.",
     "outcomes.quoteAuthor": "Chief Technology Officer",
-    "outcomes.quoteCompany": "كيان حكومي في دول مجلس التعاون الخليجي",
 
     // Featured Engagements
     "engagements.title": "مشاريع مختارة",

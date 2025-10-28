@@ -117,9 +117,6 @@ export default function Outcomes() {
                     <cite className="block text-sm font-semibold text-gray-900 not-italic">
                       {t("outcomes.quoteAuthor")}
                     </cite>
-                    <p className="text-sm text-gray-600">
-                      {t("outcomes.quoteCompany")}
-                    </p>
                   </div>
                 </footer>
               </blockquote>
